@@ -1,0 +1,762 @@
+<html>
+        
+        
+           <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+            <title>Admin Homepage</title>
+        <!--
+        
+        -->
+            <!-- load stylesheets -->
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400">   <!-- Google web font "Open Sans" -->
+            <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">                <!-- Font Awesome -->
+            <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+            <link rel="stylesheet" href="css/magnific-popup.css">                                     <!-- Magnific pop up style -->
+            <link rel="stylesheet" href="css/templatemo-style.css">                                   <!-- Templatemo style -->
+        
+               
+               <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+            <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+                <!--[if lt IE 9]>
+                  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+                  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+                  <![endif]-->
+        
+<style>
+        body {
+    font-family: "Lato", sans-serif;
+}
+
+.icon-bar {
+    width: 100%; /* Full-width */
+    background-color: #555; /* Dark-grey background */
+    overflow: auto; /* Overflow due to float */
+    position: fixed;
+    top:0;
+    z-index: 2;
+}
+
+.icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 25%; /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 36px; /* Increased font size */
+}
+
+.icon-bar a:hover {
+    background-color: rgb(87, 163, 94); /* Add a hover color */
+}
+
+.active {
+    background-color: #4CAF50; /* Add an active/current color */
+}
+
+.leftnav {
+    height: 100%;
+    width: 180px;
+    position: fixed;
+    z-index: 1;
+    top: 54px;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.leftnav p {
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.leftnav a:hover {
+    color: #f1f1f1;
+}
+
+.leftnav img {
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.leftnav button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+
+    height:40px; 
+    width:100px; 
+    margin: -20px -50px; 
+    position:relative;
+    top:50%; 
+    left:50%;
+    
+
+}
+
+.leftnav button:hover {
+    background-color: #4CAF50; /* Add an active/current color */
+    color: white;
+
+}
+
+.main {
+    border-style: solid;
+    border-width: thin;
+    background-color: #f2f2f2;
+
+
+    margin-top: 50px; /* Add a top margin to avoid content overlay */
+    margin-left: 180px; /* Same as the width of the leftnav */
+    margin-right: 180px; /* Same as the width of the leftnav */
+    
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the leftnav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .leftnav {padding-top: 15px;}
+    .leftnav a {font-size: 18px;}
+}
+
+.rightnav {
+    height: 100%;
+    width: 180px;
+    position: fixed;
+    z-index: 1;
+    top: 54px;
+    right: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+}
+
+.rightnav p {
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.dropbtn {
+    margin-right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+.dropdown {
+    margin-top:250px;
+    position: relative;
+    display: inline-block;
+    z-index: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+*/ Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+  width: 300px;
+  height: 100px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+    margin-right: 10px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  float: left;
+  width: 500px;
+  margin-top: 6px;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+  background-color:#e9ebee;
+}
+
+.container{
+    margin-top:280px;
+}
+
+.f-card {
+  background-color:white;
+  /*height:400px;*/
+  width:502px;
+  border: 1px solid #d0d1d5;
+  border-radius:3px;
+  margin: auto;
+  margin-bottom:10px;
+  padding: 12px; 
+  
+  box-shadow: 0 0 5px rgba(0, 0, 0, .30); /* Not original, just a test */
+}
+
+.header {
+  margin-bottom:17px;
+}
+
+.co-logo {
+  /*display:block;*/
+  float:left;
+  margin-right:8px;
+  border-radius: 50%;
+  
+  width:40px;
+  height:40px;
+}
+
+.co-name > a {
+  font-family: Helvetica;
+  font-size:14px;
+  font-weight: bold;
+  line-height: 1.38;
+  color: #36994f;
+  text-decoration:none;
+  
+  margin-bottom:2px;
+}
+
+.co-name > a:hover {
+  text-decoration:underline;
+}
+
+.time {
+  font-family: Helvetica;
+  font-size:12px;
+  color: #90949c;
+}
+
+.time > a {
+  color: #90949c;
+  text-decoration:none;
+}
+
+.time > a:hover {
+  text-decoration:underline;
+}
+
+.options {
+  font-family: Helvetica;
+  font-size:12px;
+  color: #e5e5e5;
+  float:right;
+}
+
+.options:hover {
+  color: black; /* Fallback */
+  color: rgba(0, 0, 0, .30);
+}
+
+.content {
+  clear:both;
+  font-family: Helvetica, sans-serif;
+  font-size:14px;
+  line-height: 1.38;
+}
+
+.reference {
+  width:476px;
+}
+.reference-thumb {
+  display:block;
+  width:476px;
+  height:249px;
+}
+
+.reference-content {
+  border: 2px solid black;
+  border: 2px solid rgba(0, 0, 0, .1);
+  border-top: 0;
+  padding: 10px 12px 10px 12px;
+}
+
+.reference:hover .reference-content {
+  border-color: black; /* Fallback */
+  border-color: rgba(0, 0, 0, .15);
+}
+
+.reference-title {
+  font-family: Georgia;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  
+  margin-bottom:5px;
+}
+
+.reference-subtitle {
+  font-family: Helvetica;
+  font-size:12px;
+  line-height: 16px; 
+}
+
+.reference-font {
+  color: #90949c;
+  font-family: Helvetica;
+  font-size: 11px;
+  line-height: 11px;
+  text-transform: uppercase;
+
+  padding-top:9px; 
+}
+
+.social {
+  margin-top:12px;
+}
+.social-buttons {
+  color: #7f7f7f;
+  font-family: Helvetica;
+  font-size: 12px;
+  font-weight:bold;
+  line-height:14px;
+  
+  border-top:1px solid #e5e5e5;
+  padding-top:4px;
+  
+}
+
+.social-buttons span {
+  font-size: 12px;
+  margin-right:20px;
+  padding:4px 4px 4px 0;
+}
+
+.social-buttons span:hover {
+  text-decoration:underline;
+  cursor:pointer;
+}
+
+.social-buttons span i {
+  padding-right:4px;
+}
+
+
+
+
+.whats {
+    margin-left: 250px;
+    
+}
+
+  
+  
+  #new_status {
+    width:502px;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 1px 0 10px #AAA;
+    font-family: 'Helvetica Neaue', 'Helvetica', sans-serif;
+    margin-top: 1rem;
+    padding: 0;
+  }
+  
+  #post_header {
+    border-bottom: solid #E8E8E8 1px;
+    margin: 0 2%;
+    padding: 0.65rem 0;
+    width: 95.75%;
+  }
+  #post_header li {
+    display: inline-block;
+  }
+  #post_header a {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    text-decoration: none;
+  }
+  #post_header li+li {
+    border-left: solid #E8E8E8 1px;
+  }
+  #post_header li:first-child a {
+    padding: 0 1rem 0 0;
+  }
+  #post_header li:nth-child(2) a {
+    padding: 0 1rem;
+  }
+  #post_header li:last-child a {
+    padding: 0 0 0 1rem;
+  }
+  #post_header .glyphicon {
+    margin-right: 0.5rem;
+  }
+  
+  #post_content {
+    margin: 0 2%;
+    padding: 0;
+    width: 95.75%;
+  }
+  #post_content img {
+    border: solid #DDD 1px;
+    margin: 1.25rem 0;
+    padding: 0;
+  }
+  #post_content .textarea_wrap {
+    cursor: text;
+  }
+  #post_content textarea {
+    border: 0;
+    margin: 0rem 0 0.5rem 0;
+    outline: 0;
+    padding: 2.5rem 0 0 1.25rem;
+    resize: none;
+  }
+  
+  #post_footer {
+    border-top: solid #E8E8E8 1px;
+    line-height: 3rem;
+    padding: 0 2% 0 3%;
+  }
+  #post_footer .navbar-nav {
+    padding: 0;
+  }
+  #post_footer .navbar-nav li {
+    display: inline-block;
+  }
+  #post_footer .navbar-nav a {
+    display: block;
+    padding: 2rem 1.25rem 2.2rem 1.25rem;
+  }
+  #post_footer .navbar-nav .glyphicon {
+    line-height: 0;
+  }
+  #post_footer :not(.btn) .glyphicon {
+    color: #999;
+  }
+  #post_footer div {
+    padding: 0;
+    text-align: right;
+  }
+  #post_footer .btn {
+    border-radius: 2px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 2.2rem;
+    margin-top: 0.75rem;
+    padding: 0 0.75rem;
+    vertical-align: middle;
+  }
+  #post_footer .btn-default {
+    color: #666;
+    margin-right: 0.5rem;
+  }
+  #post_footer .btn-default .glyphicon {
+    color: #666;
+    margin-right: 0.5rem;
+  }
+  #post_footer .caret {
+    color: #666;
+    margin-left: 0.5rem;
+  }
+  #post_footer .btn-primary {
+    background-color: #4ea259;
+    padding: 0 2rem;
+  }
+
+
+
+
+
+
+
+</style>
+
+<script>
+    /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+function myFunction2() {
+    document.getElementById("myDropdown2").classList.toggle("show");
+}
+function myFunction3() {
+    document.getElementById("myDropdown3").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+        
+        </head>
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+               <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+                <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h --> 
+                <script src="js/bootstrap.min.js"></script>                 <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
+                <script src="js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
+                <script src="js/jquery.magnific-popup.min.js"></script>     <!-- Magnific pop-up (http://dimsemenov.com/plugins/magnific-popup/) -->
+                
+            
+            
+                
+                <body>
+
+                <div class="icon-bar">
+                        <a class="nav-link" href="Admin_Homepage.html"><img height="30" src="cat_house.png"></a>
+                        <a class="nav-link" href="Admin_Cat.html"><img height="30" src="cat.png"></a>
+                        <a class="nav-link" href="Admin_CatAdoption.html"><img height="30" src="heart.png"></a>
+                        <a class="nav-link" href="admin_community.html"><img height="30" src="community.png"></a>
+                         
+                </div>
+
+                
+                <div class="main">
+                        
+                    
+                                            
+
+
+
+
+                    <div class="whats">
+                              <div class="col-xs-12 col-sm-7" id="new_status">
+                        <ul class="navbar-nav col-xs-12" id="post_header" role="navigation">
+                        <li><a href="#"><span class="glyphicon glyphicon-pencil"></span>Update Status</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-picture"></span>Add Photos/Video</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-th"></span>Create Photo Album</a></li>
+                        </ul>
+                        <div class="col-xs-12" id="post_content">
+                        <div class="textarea_wrap"><textarea class="col-xs-11" placeholder="What's on your cat-loving mind?"></textarea></div>
+                        </div>
+                        <div class="col-xs-12" id="post_footer">
+                        <div class="col-xs-5">
+                            <button class="btn btn-primary">Post</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown"style="float:right;">
+                        <p>Sort:</p>
+                        <button onclick="myFunction()" class="dropbtn">by</button>
+                        <div id="myDropdown" class="dropdown-content">
+                          <a href="#">none</a>
+                          <a href="#">top</a>
+                          <a href="#">comments</a>
+                          <a href="#">new</a>
+                        </div>
+
+                        <button onclick="myFunction2()" class="dropbtn">from</button>
+                        <div id="myDropdown2" class="dropdown-content">
+                          <a href="#">none</a>
+                          <a href="#">past 24 hours</a>
+                          <a href="#">past week</a>
+                          <a href="#">past year</a>
+                          <a href="#">all time</a>
+                        </div>
+
+                        <button onclick="myFunction3()" class="dropbtn">cats</button>
+                        <div id="myDropdown3" class="dropdown-content">
+                          <a href="#">all</a>
+                          <a href="#">Archer</a>
+                          <a href="#">cat name</a>
+                          
+                        </div>
+                      </div>
+                              <div class="container">
+                                  
+                                  
+                                    <div class="f-card">
+
+                                        
+                                            <div class="header">
+                                              <div class="options"><i class="fa fa-chevron-down"></i></div>
+                                              <img class="co-logo" src="https://www.w3schools.com/howto/img_avatar2.png" />
+                                              <div class="co-name"><a href="#">Cat Luver 69</a></div>
+                                              <div class="time"><a href="#">2hrs</a> · <i class="fa fa-globe"></i></div>
+                                            </div>
+                                            <div class="content">
+                                              <p>The compassion exhibited by this homeless woman in Ho Chi Minh for the equally homeless cats is very inspiring. Often, the most generous people on Earth are also those who do not have much. See More</p>
+                                            </div>
+                                          
+                                            <div class="reference">
+                                              <img class="reference-thumb" src="http://www.chicagobusiness.com/apps/pbcsi.dll/storyimage/CG/20160405/NEWS07/160409939/AR/0/feral-cats.jpg" />
+                                              <div class="reference-content">
+                                                <div class="reference-title">Le Thi Quy: The Cat’s Mother - NOWNESS</div>
+                                                <div class="reference-subtitle">Australian director Andrew Piggott and Doan Phuong Ha's latest short, Le Thi Quy(The Cat's Mother), tells the story of one Ho Chi Minh City resident who opens her home as a refuge for the city's cats. Read more on NOWNESS - http://bit.ly/2pn8tOC</div>
+                                                <div class="reference-font">placeholder.it</div>
+                                              </div>
+                                            </div>
+                                            <div class="social">
+                                              <div class="social-content"></div>
+                                              <div class="social-buttons">
+                                                <span><i class="fa fa-thumbs-up"></i>Love</span>
+                                                <span><i class="fa fa-comment"></i>Comment</span>
+                                                <span><i class="fa fa-share"></i>Report</span></div>
+                                            </div>
+                                          </div>
+                                          
+                                          <div class="f-card">
+                                            <div class="header">
+                                              <div class="options"><i class="fa fa-chevron-down"></i></div>
+                                              <img class="co-logo" src="img_avatar.png" />
+                                              <div class="co-name"><a href="#">Rand McNally</a></div>
+                                              <div class="time"><a href="#">23hrs</a> · <i class="fa fa-globe"></i></div>
+                                            </div>
+                                            <div class="content">
+                                              <p>For ADOPTION: Dr Lane & Edmund Garcia scooped this little guy up at the Leveriza parking area, near the Faculty Center. He's too young to be left on campus, so I brought him home first. Just contact us if you're interested in this cutie pie. I named him"SATORI" (enlightenment) bec he has the color of the sun. And the sun is the symbol of absolute Enlightenment in Plato's Allegory of the Cave.</p>
+                                            </div>
+                                          
+                                            <div class="reference">
+                                              <img class="reference-thumb" src="http://www.catster.com/wp-content/uploads/2015/06/cat-adoption-tips-3.jpg" />
+                                              
+                                            <div class="social">
+                                              <div class="social-content"></div>
+                                              <div class="social-buttons">
+                                                <span><i class="fa fa-thumbs-up"></i>Love</span>
+                                                <span><i class="fa fa-comment"></i>Comment</span>
+                                                <span><i class="fa fa-share"></i>Report</span></div>
+                                            </div>
+                                          </div>
+    
+    
+    
+    
+                            </div>
+
+                </div>
+
+
+
+                
+                <div id="myleftnav" class="leftnav">
+                        <img src="img_avatar.png" alt="Avatar">
+                        <p>Admin</p>
+                        <button>LOGOUT</button>
+                        <br>
+                        <br>
+                        <br>
+                    <p><a href="Admin_Reports.html">Reports<i class="material-icons">priority_high</i></a></p>
+
+                      </div>
+                      
+
+                      
+                <div id="myrightnav" class="rightnav">
+                        <p>Events <a href="Admin_Events.html"><i class="material-icons">add_circle_outline</i></a></p>
+                       
+                      </div>
+                    </div>
+
+                </body>
+            
+           
+        
+        
+        
+        </html>
+            
+<!--
+
+                <div id="myleftnav" class="leftnav">
+                        <img src="img_avatar.png" alt="Avatar">
+                        <p>Admin</p>
+                        <button>LOGOUT</button>
+                        <br>
+                        <br>
+                        <br>
+                    <p><a href="#">Reports<i class="material-icons">priority_high</i></a></p>
+
+                      </div>
+                      
+
+                      
+                <div id="myrightnav" class="rightnav">
+                        <p>Events <button><i class="material-icons">add_circle_outline</i></button></p>
+                       
+                      </div>
+-->
